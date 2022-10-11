@@ -1,0 +1,16 @@
+
+<%-include("partials/header")-%>
+    <h1>Home</h1>
+    <p>
+      <%=value1%>
+    </p>
+    <%arr.forEach(function(arr1){%>
+      <h1><%=(arr1.title)%></h1>
+      <p>
+        <%=arr1.content.substring(0,98)+"..."%>
+        <a href="/posts/<%=arr1.title%>">Read More</a>
+      </p>
+    <%})%>
+
+
+<%-include("partials/footer")-%>
